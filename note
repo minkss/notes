@@ -1,0 +1,23 @@
+//test under node
+//some test on concept "activity object"
+
+> var fm = function(){var f = function(){return a+b;};var a = 2;var b = 3; return f;};
+undefined
+> fm()()
+5
+
+function hi(){var a = 1;var sum = a + b;var b = 4;return sum ;}
+undefined
+> hi();
+NaN
+> 
+
+> function test(){var a = 1; (function(){console.log(a+b);})(); var b = 4;}
+undefined
+> test();
+NaN
+undefined
+
+
+//it seems that the "activity object" is growing step by step
+//by step,I mean the statement separated by ";"
